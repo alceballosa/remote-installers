@@ -1,8 +1,14 @@
 # remote-installers
 Just a repo with ways to install some common utils into remote environments without using sudo.
 
+# Setup console colors
+Should do this first so it doesn't interfere with conda activate and others.
+```bash
+echo 'export PS1="\[\e[1;31m\][\[\e[m\]\[\e[033;1;92m\]\u\[\e[m\]@\[\e[033;1;90m\]\h\[\e[m\] \[\e[033;1;94m\]\w\[\e[m\]\[\e[1;31m\]]\[\e[m\]\\$ "' >> ~/.bashrc
+```
 
 # Create bin
+
 ```bash
 mkdir ~/software
 mkdir ~/software/bin
@@ -11,14 +17,12 @@ mkdir ~/software/bin
 # Add ~/software/bin to path
 ```bash
 echo 'export PATH="~/software/bin:$PATH"' >> ~/.bashrc
-```
-
-# Setup console colors
-```bash
-echo 'export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\] \[\e[38;5;214m\]\W\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 # Install unzip
+For really restricted environments where unzip isn't available.
+
 ```bash
 wget https://oss.oracle.com/el4/unzip/unzip.tar
 tar xf unzip.tar
@@ -32,17 +36,20 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b -p ~/miniconda3
 rm Miniconda3-latest-Linux-x86_64.sh
 ~/miniconda3/bin/conda init
-
+echo 'conda activate base' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 # git
 Enables using a more recent version of git when inside conda's base env.
+
 ```
 conda activate base
 conda install git
 ```
 
 # cheat
+
 ```bash
 mkdir ~/software
 mkdir ~/software/bin
@@ -56,7 +63,6 @@ rm cheat*
 # rclone
 
 ```bash
-cd ~
 curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
 unzip rclone-current-linux-amd64.zip
 cp rclone-*-linux-amd64/rclone ~/software/bin
@@ -68,7 +74,6 @@ rm rclone-current-linux-amd64.zip
 Installs tldr into the base conda environment, to avoid the npm requirement.
 
 ```bash
-
 conda activate base
 pip install tldr
 ```
