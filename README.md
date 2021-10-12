@@ -78,6 +78,14 @@ conda activate base
 pip install tldr
 ```
 
+Alternatively, if pip3 is available (python should be >= 3.6):
+
+```bash
+pip3 install tldr
+echo 'export PATH="~/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
 ### tldr color edit (npm ver.)
 This works only for tldr installed through npm.
 
