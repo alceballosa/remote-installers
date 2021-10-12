@@ -1,26 +1,26 @@
 # remote-installers
 Just a repo with ways to install some common utils into remote environments without using sudo.
 
-# Setup console colors
+### Setup console colors
 Should do this first so it doesn't interfere with conda activate and others.
 ```bash
 echo 'export PS1="\[\e[1;31m\][\[\e[m\]\[\e[033;1;92m\]\u\[\e[m\]@\[\e[033;1;90m\]\h\[\e[m\] \[\e[033;1;94m\]\w\[\e[m\]\[\e[1;31m\]]\[\e[m\]\\$ "' >> ~/.bashrc
 ```
 
-# Create bin
+### Create bin
 
 ```bash
 mkdir ~/software
 mkdir ~/software/bin
 ```
 
-# Add ~/software/bin to path
+### Add ~/software/bin to path
 ```bash
 echo 'export PATH="~/software/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-# Install unzip
+### Install unzip
 For really restricted environments where unzip isn't available.
 
 ```bash
@@ -30,7 +30,7 @@ mv unzip ~/software/bin
 rm unzip*
 ```
 
-# Miniconda 3
+### Miniconda 3
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b -p ~/miniconda3
@@ -40,7 +40,7 @@ echo 'conda activate base' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-# git
+### git
 Enables using a more recent version of git when inside conda's base env.
 
 ```
@@ -48,7 +48,7 @@ conda activate base
 conda install git
 ```
 
-# cheat
+### cheat
 
 ```bash
 mkdir ~/software
@@ -60,7 +60,7 @@ mv cheat-linux-amd64 $HOME/software/bin/cheat
 rm cheat*
 ```
 
-# rclone
+### rclone
 
 ```bash
 curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
@@ -70,7 +70,7 @@ rm -r rclone-*-linux-amd64
 rm rclone-current-linux-amd64.zip
 ```
 
-# tldr
+### tldr
 Installs tldr into the base conda environment, to avoid the npm requirement.
 
 ```bash
@@ -78,7 +78,7 @@ conda activate base
 pip install tldr
 ```
 
-# tldr color edit (npm ver.)
+### tldr color edit (npm ver.)
 This works only for tldr installed through npm.
 
 ```bash
