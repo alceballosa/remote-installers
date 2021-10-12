@@ -110,3 +110,13 @@ echo '{
   "theme": "ocean"
 }' > ~/.tldrrc
 ```
+
+--------------------------------
+
+# BONUS:
+
+### Run a detached command using nohup, writing both stdout and stderr to the output:
+
+```bash
+nohup [command] [args]  > [logfile_name].out 2>&1 &
+```
