@@ -2,26 +2,29 @@
 Just a repo with ways to install some common utils into remote environments without using sudo.
 
 
-# Setup bin
-
+# Create bin
 ```bash
 mkdir ~/software
 mkdir ~/software/bin
 ```
 
 # Add ~/software/bin to path
+```bash
 echo 'export PATH="~/software/bin:$PATH"' >> ~/.bashrc
-
+```
 
 # Setup console colors
+```bash
 echo 'export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\] \[\e[38;5;214m\]\W\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "' >> ~/.bashrc
-
+```
 
 # Install unzip
+```bash
 wget https://oss.oracle.com/el4/unzip/unzip.tar
 tar xf unzip.tar
 mv unzip ~/software/bin
 rm unzip*
+```
 
 # Miniconda 3
 ```bash
