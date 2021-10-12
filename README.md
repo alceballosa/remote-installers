@@ -5,6 +5,7 @@ Just a repo with ways to install some common utils into remote environments with
 Should do this first so it doesn't interfere with conda activate and others.
 ```bash
 echo 'export PS1="\[\e[1;31m\][\[\e[m\]\[\e[033;1;92m\]\u\[\e[m\]@\[\e[033;1;90m\]\h\[\e[m\] \[\e[033;1;94m\]\w\[\e[m\]\[\e[1;31m\]]\[\e[m\]\\$ "' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ### Create bin
