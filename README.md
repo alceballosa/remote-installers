@@ -44,7 +44,7 @@ source ~/.bashrc
 ### Create a conda env at a given location
 Usually we can just create conda envs and let conda put them in home/<username>, however, there are sometimes space limitations so we might prefer installing the envs into another folder (in this case, a symlink to the scratch storage):
 ```bash
-conda env create -f "<path_to>.yml" -p "~/scratch/envs/<env_name>"  
+conda env create -f "<path_to>.yml" -p "~/scratch/envs/<env_name>"
 ```
 
 ### git
@@ -126,4 +126,9 @@ echo '{
 
 ```bash
 nohup [command] [args]  > [logfile_name].out 2>&1 &
+```
+or when using python...
+
+```bash
+nohup python -u [args]  > [logfile_name].out 2>&1 &
 ```
