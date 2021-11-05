@@ -135,3 +135,8 @@ echo '{
 ```bash
 nohup [command] [args]  > [logfile_name].out 2>&1 &
 ```
+or when using python...
+
+```bash
+nohup python -u [args]  > [logfile_name].out 2>&1 &
+```
