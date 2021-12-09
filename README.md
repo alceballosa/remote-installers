@@ -9,15 +9,14 @@ source ~/.bashrc
 ```
 
 ### Create bin
-Creates some folders for putting programs in.
+Creates a folder for putting programs in.
 ```bash
-mkdir ~/software
-mkdir ~/software/bin
+mkdir ~/bin
 ```
 
-### Add ~/software/bin to path
+### Add ~/bin to bash path
 ```bash
-echo 'export PATH="~/software/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="~/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -27,7 +26,7 @@ For really restricted environments where unzip isn't available.
 ```bash
 wget https://oss.oracle.com/el4/unzip/unzip.tar
 tar xf unzip.tar
-mv unzip ~/software/bin
+mv unzip ~/bin
 rm unzip*
 ```
 
@@ -66,12 +65,11 @@ conda install git
 ### cheat
 
 ```bash
-mkdir ~/software
-mkdir ~/software/bin
+mkdir ~/bin
 wget https://github.com/cheat/cheat/releases/download/4.2.3/cheat-linux-amd64.gz
 gzip -d cheat-linux-amd64
 chmod +x cheat-linux-amd64
-mv cheat-linux-amd64 $HOME/software/bin/cheat
+mv cheat-linux-amd64 $HOME/bin/cheat
 rm cheat*
 ```
 
@@ -80,10 +78,13 @@ rm cheat*
 ```bash
 curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
 unzip rclone-current-linux-amd64.zip
-cp rclone-*-linux-amd64/rclone ~/software/bin
+cp rclone-*-linux-amd64/rclone ~/bin
 rm -r rclone-*-linux-amd64
 rm rclone-current-linux-amd64.zip
 ```
+
+Now you can use ```rclone config``` to set up rclone with GDrive or another kind of account.
+
 
 ### tldr
 Installs tldr into the base conda environment, to avoid the npm requirement.
