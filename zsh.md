@@ -8,3 +8,36 @@ cd zsh
 make
 make install
 ```
+
+# Making zsh the default shell
+
+```echo 'if test -t 1;' >> ~/.bashrc
+echo '  then exec zsh' >> ~/.bashrc
+echo 'fi' >> ~/.bashrc
+```
+
+# Install oh-my-zsh and plugins
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+# Set theme and plugins
+
+We can do the following manually:
+```
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+# Add user bin to path
+```
+echo "path+='~/bin'" >> ~/.zshrc
+echo "path+='~/.local/bin'" >> ~/.zshrc
+```
+
+# Replace ~/.p10k.sh with the file provided in this repository
+
