@@ -38,9 +38,11 @@ export HISTSIZE=10000000
 
 We can do the following manually:
 ```
-plugins=(git history z zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git history jsontools z zsh-syntax-highlighting zsh-autosuggestions)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
+Use history with ```hsi``` and jsontools with ```pp_json``` and [https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools](more).
+
 
 # Add user bin to path
 ```
