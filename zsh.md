@@ -26,6 +26,14 @@ git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+# Increase zsh history size
+
+Append the following to lines to ~/.zshrc
+```
+export HISTFILESIZE=10000000
+export HISTSIZE=10000000
+```
+
 # Set theme and plugins
 
 We can do the following manually:
@@ -41,4 +49,7 @@ echo "path+='~/.local/bin'" >> ~/.zshrc
 ```
 
 # Replace ~/.p10k.sh with the file provided in this repository
+
+Pretty straightforward
+
 
