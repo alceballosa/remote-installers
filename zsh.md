@@ -38,7 +38,7 @@ export HISTSIZE=10000000
 
 We can do the following manually:
 ```
-plugins=(git zsh-z zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git history z zsh-syntax-highlighting zsh-autosuggestions)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
