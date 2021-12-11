@@ -51,13 +51,25 @@ or
 conda create --prefix "~/scratch/envs/<env_name>"
 ```
 
-
-
+### tree
+```
+  wget http://mama.indstate.edu/users/ice/tree/src/tree-1.8.0.tgz
+  tar -xzvf tree-1.8.0.tgz
+  cd tree-*
+  make
+  cp tree ~/bin
+  cd ..
+  rm -r tree*
+```
 
 ### git
 Enables using a more recent version of git when inside conda's base env.
 
+```bash
+conda activate base
+conda install git 
 ```
+<!--```
 conda install -c anaconda libcurl
 curl -LO https://github.com/git/git/tarball/v2.34.1
 tar -xzvf v2.34.1
@@ -65,7 +77,7 @@ cd git*
 make configure
 ./configure --prefix=$HOME
 make
-make install
+make install -->
 
 ```
 
