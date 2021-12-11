@@ -41,7 +41,7 @@ We can do the following manually:
 plugins=(git history jsontools z zsh-syntax-highlighting zsh-autosuggestions)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
-Use history with ```hsi``` and jsontools with ```pp_json``` and [https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools](more).
+Use history with ```hsi``` and jsontools with ```pp_json``` and [more](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools)
 
 
 # Add user bin to path
