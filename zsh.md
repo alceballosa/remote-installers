@@ -53,3 +53,8 @@ echo "path+='~/.local/bin'" >> ~/.zshrc
 Pretty straightforward
 
 
+# Reload zsh and apply all changes using either:
+
+```omz reload``` or ```exec zsh```
+
+
