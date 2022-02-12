@@ -61,12 +61,11 @@ Pretty straightforward
 
 # Install dir-colors solarized for auto-completion colors:
 
-Grab ```dircolors.ansi-universal``` and put it in the ```~/.dircolors``` folder, then do:
+Grab ```dircolors.ansi-universal``` from [here](https://github.com/seebi/dircolors-solarized) and put it in the ```~/.dircolors``` folder, then do:
 
 ```
 echo "eval `dircolors ~/.dircolors/dircolors.ansi-universal`" >> ~/.zshrc
 ```
 
-https://github.com/seebi/dircolors-solarized
 
 
