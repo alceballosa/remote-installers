@@ -65,6 +65,8 @@ Grab ```dircolors.ansi-universal``` from [here](https://github.com/seebi/dircolo
 
 ```
 echo "eval `dircolors ~/.dircolors/dircolors.ansi-universal`" >> ~/.zshrc
+echo "zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}" >> ~/.zshrc
+chmod u+r ~/.zshrc
 ```
 
 
