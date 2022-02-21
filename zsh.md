@@ -70,8 +70,8 @@ Use history with ```hsi``` and jsontools with ```json_pp``` and [more](https://g
 
 # Add user bin to path
 ```
-echo "path+='~/bin'" >> ~/.zshrc
-echo "path+='~/.local/bin'" >> ~/.zshrc
+echo "path+='$HOME/bin'" >> ~/.zshrc
+echo "path+='$HOME/.local/bin'" >> ~/.zshrc
 ```
 
 # Replace ~/.p10k.sh with the file provided in this repository
@@ -88,8 +88,8 @@ Pretty straightforward
 Grab ```dircolors.ansi-universal``` from [here](https://github.com/seebi/dircolors-solarized) and put it in the ```~/.dircolors``` folder, then do:
 
 ```
-echo "eval `dircolors ~/.dircolors/dircolors.ansi-universal`" >> ~/.zshrc
-echo "zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}" >> ~/.zshrc
+eval `dircolors ~/.dircolors/dircolors.ansi-universal`
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 chmod u+r ~/.zshrc
 ```
 
