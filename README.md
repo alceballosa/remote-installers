@@ -69,17 +69,7 @@ Enables using a more recent version of git when inside conda's base env.
 conda activate base
 conda install git 
 ```
-<!--```
-conda install -c anaconda libcurl
-curl -LO https://github.com/git/git/tarball/v2.34.1
-tar -xzvf v2.34.1
-cd git*
-make configure
-./configure --prefix=$HOME
-make
-make install -->
 
-```
 
 ### cheat
 
