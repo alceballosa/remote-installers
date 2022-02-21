@@ -17,7 +17,7 @@ Now install ncurses:
 wget ftp://ftp.invisible-island.net/ncurses/ncurses.tar.gz
 tar -zxvf ncurses*
 cd ncurses-*
-./configure --prefix=$HOME/ncurses --with-shared --without-debug --enable-widec  
+./configure --prefix=$NCURSES_HOME --with-shared --without-debug --enable-widec  
 make
 make install
 ```
