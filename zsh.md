@@ -34,7 +34,8 @@ make install
 
 # Making zsh the default shell
 
-```echo 'if test -t 1;' >> ~/.bashrc
+```bash
+echo 'if test -t 1;' >> ~/.bashrc
 echo '  then exec zsh' >> ~/.bashrc
 echo 'fi' >> ~/.bashrc
 ```
