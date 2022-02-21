@@ -53,13 +53,13 @@ conda create --prefix "~/scratch/envs/<env_name>"
 
 ### tree
 ```
-  wget http://mama.indstate.edu/users/ice/tree/src/tree-1.8.0.tgz
-  tar -xzvf tree-1.8.0.tgz
-  cd tree-*
-  make
-  cp tree ~/bin
-  cd ..
-  rm -r tree*
+wget http://mama.indstate.edu/users/ice/tree/src/tree-1.8.0.tgz
+tar -xzvf tree-1.8.0.tgz
+cd tree-1.8.0
+make
+cp tree ~/bin
+cd ..
+rm -r tree*
 ```
 
 ### git
