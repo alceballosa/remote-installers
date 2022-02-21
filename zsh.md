@@ -85,11 +85,14 @@ Pretty straightforward
 
 # Install dir-colors solarized for auto-completion colors:
 
-Grab ```dircolors.ansi-universal``` from [here](https://github.com/seebi/dircolors-solarized) and put it in the ```~/.dircolors``` folder, then do:
+Grab ```dircolors.ansi-universal``` from [here](https://github.com/seebi/dircolors-solarized) and put it in the ```~/.dircolors``` folder, then add to .zshrc:
 
 ```
 eval `dircolors ~/.dircolors/dircolors.ansi-universal`
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+```
+And run:
+```
 chmod u+r ~/.zshrc
 ```
 
