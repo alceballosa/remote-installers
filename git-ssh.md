@@ -37,3 +37,4 @@ To test access, run the following:
 ssh -vT git@github.com
 ```
 
+More detailed tutorial: https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
