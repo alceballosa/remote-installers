@@ -32,13 +32,18 @@ make
 make install
 ```
 
+
+
 # Making zsh the default shell
 
 ```bash
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 echo 'if test -t 1;' >> ~/.bashrc
 echo '  then exec zsh' >> ~/.bashrc
 echo 'fi' >> ~/.bashrc
 ```
+
+And now run ```source ~/.bashrc```
 
 # Install oh-my-zsh and plugins
 
