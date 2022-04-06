@@ -60,7 +60,7 @@ export HISTSIZE=10000000
 
 # Set theme and plugins
 
-We can do the following manually:
+We can manually edit the ```~/.zshrc``` file to set up the theme and plugins:
 ```
 plugins=(git history jsontools z zsh-syntax-highlighting zsh-autosuggestions)
 ZSH_THEME="powerlevel10k/powerlevel10k"
