@@ -52,10 +52,13 @@ conda create --prefix "~/scratch/envs/<env_name>"
 ```
 
 ### tree
+
+As per: [link](https://superuser.com/questions/190493/can-i-use-a-command-such-as-tree-without-installing-it-system-wide)
+
 ```
-wget http://mama.indstate.edu/users/ice/tree/src/tree-1.8.0.tgz
-tar -xzvf tree-1.8.0.tgz
-cd tree-1.8.0
+wget http://mama.indstate.edu/users/ice/tree/src/tree-2.0.2.tgz
+tar -xzvf tree-2.0.2.tgz
+cd tree-2.0.2
 make
 cp tree ~/bin
 cd ..
